@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19</title>
+  <meta name="referrer" content="origin" />
+  <link rel="canonical" href="" />
+  <link rel="icon" type="image/png" href="./favicon.ico" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  <meta name="author" content="Recreatorus" />
+  <meta name="description" content="covid statistic" />
+  <meta name="keywords" content="statistics on covid, статистика по коронавирусу, коронавирус" />
+  <meta itemprop="name" content="" />
+  <meta itemprop="description" content="" />
+  <meta itemprop="image" content="" />
+  <style>
+    @font-face {
+      font-family: 'Rubik';
+      font-display: swap;
+      font-style: normal;
+      font-weight: 300;
+      src: local('Rubik Light'),
+        url('./fonts/rubik-v11-latin_cyrillic-300.woff2') format('woff2'),
+        url('./fonts/rubik-v11-latin_cyrillic-300.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Rubik';
+      font-display: swap;
+      font-style: normal;
+      font-weight: 400;
+      src: local('Rubik'),
+        url('./fonts/rubik-v11-latin_cyrillic-regular.woff2') format('woff2'),
+        url('./fonts/rubik-v11-latin_cyrillic-regular.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Rubik';
+      font-display: swap;
+      font-style: normal;
+      font-weight: 500;
+      src: local('Rubik Medium'),
+        url('./fonts/rubik-v11-latin_cyrillic-500.woff2') format('woff2'),
+        url('./fonts/rubik-v11-latin_cyrillic-500.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Playfair Display';
+      font-display: swap;
+      font-style: normal;
+      font-weight: 500;
+      src: local('Playfair Display'),
+        url('../fonts/playfair-display-v21-latin_cyrillic-500.woff2') format('woff2'),
+        url('../fonts/playfair-display-v21-latin_cyrillic-500.woff') format('woff'),
+    }
+  </style>
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./js/index.min.js" as="script">
+</head>
+
+<body>
+  <div class="page">
+    <h1>COVID-19</h1>
+    <p>Всего заражений: <span class="total-cases"></span> (+ <span class="cases-day"></span>)</p>
+    <p>Всего смертей: <span class="total-deaths"></span> (+ <span class="deaths-day"></span>)</p>
+    <p>Обновлено: <span class="day-update"></span></p>
+    <table id="sortMe" class="table">
+      <thead class="thead">
+        <tr>
+          <th width="5%" data-type="number">№</th>
+          <th width="25%">Страна</th>
+          <th width="10%" data-type="number" class="active">Заражений</th>
+          <th width="10%" data-type="number">Заражений<br>за день</th>
+          <th width="10%" data-type="number">Смертей</th>
+          <th width="10%" data-type="number">%<br>от общего</th>
+          <th width="10%" data-type="number">Смертей<br>за день</th>
+          <th width="10%" data-type="number">Смертей<br>на 1 млн</th>
+          <th width="10%" data-type="number">Случаев<br>на 1 млн</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <script src="./js/index.min.js"></script>
+</body>
+
+</html>
